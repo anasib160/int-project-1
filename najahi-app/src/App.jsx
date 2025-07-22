@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
-import { AuthProvider } from './context/AuthContext';
 import AuthLayout from './layouts/AuthLayout';
 import MainLayout from './layouts/MainLayout';
 import Welcome from './pages/auth/Welcome';
@@ -33,11 +32,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <AuthProvider>
       <LanguageProvider>
         <RouterProvider router={router} />
       </LanguageProvider>
-    </AuthProvider>
   );
 }
 
